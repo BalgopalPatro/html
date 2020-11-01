@@ -23,7 +23,7 @@ if (!isset($page_title)) {
 var php_js_strings = [];
 php_js_strings[87] = " <?php echo lang(87); ?>";
 php_js_strings[281] = "<?php echo lang(281); ?>";
-pic1= new Image(); 
+pic1= new Image();
 pic1.src="templates/plugmod/images/ajax-loading.gif";
 /* ]]> */
 </script>
@@ -36,4 +36,4 @@ if ($GLOBALS['options']['flist_sort']) { echo '<script type="text/javascript" sr
 </head>
 
 <body>
-<center><img src="templates/plugmod/images/logo_pm.gif" alt="RapidLeech PlugMod" border="0" /></center><br />
+<center><a href="//telegram.dog/BhadooCloud"><img src="https://images.cdn.hashhackers.com/logo/logo-white-d.svg" alt="RapidLeech PlugMod" border="0" height="40px" style="margin-top: 10px;"></a></center><br />
