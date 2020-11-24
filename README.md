@@ -1,18 +1,23 @@
-✡️ Support Forum - https://rapidleech.com/forum/
+### LAMP on Ubuntu - [Source](https://web.archive.org/web/20180323030918/https://howtoubuntu.org/how-to-install-lamp-on-ubuntu) [PHP](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
 
-✡️ Last Update - March 16,2020
+````
+sudo apt-get install apache2
+sudo apt-get install mysql-server
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update && sudo apt-get upgrade && sudo apt update && sudo apt upgrade
+sudo apt install php7.4
+sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
+sudo service apache2 restart
+php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
+cd /var/www/html
+````
 
-✡️ Latest Version - Rev.431 
+### Rapidleech [RAR Fix](https://github.com/Th3-822/rapidleech/issues/71)
 
-✡️ Active Contributors - 1
+````
+cd /var/www/html
+````
 
-✡️ Rapid Leech is a free server transfer script for use on various popular upload/download sites such as uploaded.net, Rapidgator.net and more than 127 others. The famous Rapidleech script transfers files from Other Filehosting Servers To Your Server via your fast servers connection speed and dumps the file on your server. You may then download these files from your server anytime later.
-
-Rapidleech script has being used by more than 5 million users worldwide and has being installed on more than 2000 servers.
-For webmasters, if you have not tried the script before, download and install now and you will see how convenient the script can be. You may also generate income by offering your Rapidleech sites to end-users and earn income from advertising programs. Some webmasters are earning hundreds per day on the advertising program(Google and yahoo Ads) from their Rapidleech sites. Script installation is extremely easy and does not require any database.
-
-For end-users, you may search on our forum for readily available installed scripts on servers worldwide. You may use them but please support these sites by visiting their sponsors or donate in order to keep these sites available.
-
-✡️ Deploy to Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+````
+sudo rm -rf rar && sudo wget https://rarlab.com/rar/rarlinux-x64-5.6.0.tar.gz && sudo tar -xvf rarlinux-x64-5.6.0.tar.gz && sudo rm -f rarlinux-x64-5.6.0.tar.gz && sudo chmod -R 777 rar && sudo chmod -R 777 rar/*
+````
