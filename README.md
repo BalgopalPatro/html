@@ -1,4 +1,4 @@
-### LAMP on Ubuntu - [Source](https://web.archive.org/web/20180323030918/https://howtoubuntu.org/how-to-install-lamp-on-ubuntu) [PHP](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
+### LAMP on Ubuntu - [Source](https://web.archive.org/web/20180323030918/https://howtoubuntu.org/how-to-install-lamp-on-ubuntu) [PHP](https://web.archive.org/web/20200923164429/https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
 
 ````
 sudo apt-get install apache2
@@ -12,7 +12,7 @@ php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
 cd /var/www/html
 ````
 
-### Rapidleech [RAR Fix](https://github.com/Th3-822/rapidleech/issues/71)
+### Rapidleech [RAR Fix](https://web.archive.org/web/20201011110252/https://github.com/Th3-822/rapidleech/issues/71)
 
 ````
 cd /var/www/html
