@@ -1,6 +1,7 @@
 ### LAMP on Ubuntu - [Source](https://web.archive.org/web/20180323030918/https://howtoubuntu.org/how-to-install-lamp-on-ubuntu) [PHP](https://web.archive.org/web/20200923164429/https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
 
 ````
+
 sudo apt-get install apache2
 sudo apt-get install mysql-server
 sudo add-apt-repository ppa:ondrej/php
@@ -9,6 +10,9 @@ sudo apt install php7.4
 sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl -y
 sudo service apache2 restart
 php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
+cd /var/www
+sudo rm -r html
+sudo git clone https://github.com/BhadooCloud/html
 cd /var/www/html
 ````
 
