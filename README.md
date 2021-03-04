@@ -18,6 +18,8 @@ sudo git clone https://github.com/BhadooCloud/html
 cd /var/www/html
 ````
 
+https://certbot.eff.org/lets-encrypt/ubuntufocal-apache
+
 ### Rapidleech [RAR Fix](https://web.archive.org/web/20201011110252/https://github.com/Th3-822/rapidleech/issues/71)
 
 ````
