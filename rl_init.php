@@ -27,7 +27,7 @@ define('HOST_DIR', 'hosts/');
 define('CLASS_DIR', 'classes/');
 define('CONFIG_DIR', 'configs/');
 define('BUILD', '30May2011');
-define('CREDITS', '<a href="https://rzp.io/l/rapidleech" target="_blank"><img src="https://cdn.jsdelivr.net/gh/jscdn/images@master/donate.png" alt="Donate"></a><br><script async src="//ads.hashhackers.com/pagead/js/adsbygoogle.js"></script> <!-- 728*90 1 --> <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5435553179213419" data-ad-slot="1301269083"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script><br><a href="https://www.google.com/search?q=rapidleech" class="rl-link"><b>RapidLeech</b></a>&nbsp;<b class="rev-dev">PlugMod (eqbal) rev. ' . $rev_num . '</b> <span class="rev-dev">' . $dev_name . '</span><br><small class="small-credits">Credits to Pramode &amp; Checkmate &amp; Kloon</small>');
+define('CREDITS', '<a href="https://rzp.io/l/rapidleech" target="_blank"><img src="https://cdn.jsdelivr.net/gh/jscdn/images@master/donate.png" alt="Donate"></a><br><script async src="//ads.hashhackers.com/pagead/js/adsbygoogle.js"></script> <!-- 728*90 1 --> <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-5435553179213419" data-ad-slot="1301269083"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script><br><a href="https://www.google.com/search?q=rapidleech" class="rl-link"><b>RapidLeech</b></a>&nbsp;<b class="rev-dev">PlugMod (eqbal) rev. ' . $rev_num . '</b> <span class="rev-dev">' . $dev_name . '</span><br><small class="small-credits">Bhadoo Cloud Cyber Systems and Tesseract Corporation</small>');
 
 require_once(CONFIG_DIR . 'setup.php');
 
