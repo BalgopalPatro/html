@@ -32,7 +32,7 @@ pic1.src="templates/plugmod/images/ajax-loading.gif";
 if ($GLOBALS['options']['ajax_refresh']) { echo '<script type="text/javascript" src="classes/ajax_refresh.js"></script>'.$nn; }
 if ($GLOBALS['options']['flist_sort']) { echo '<script type="text/javascript" src="classes/sorttable.js"></script>'.$nn; }
 ?>
-
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "732c081fce7741a681f84ea884e176c4"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 
 <body>
