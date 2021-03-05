@@ -25,7 +25,7 @@ if (!empty($_GET['savesettings']) && $_GET['savesettings'] == 'on') {
 		setcookie('email', $_GET['email'], $expiretime);
 		if (!empty($_GET['split']) && $_GET['split'] == 'on') {
 			setcookie('split', '1', $expiretime);
-			if (!empty($_GET['partSize']) && is_numeric($_GET['partSize'])) setcookie('partSize', $_GET['partSize'], $expiretime);
+			if ( !empty($_GET['partSize']) && is_numeric($_GET['partSize']) && $_GET['partSize'] >= 500 ) setcookie('partSize', $_GET['partSize'], $expiretime);
 			else unsetcookies('partSize');
 			if (!empty($_GET['method']) && in_array($_GET['method'], array('tc', 'rfc'))) setcookie('method', $_GET['method'], $expiretime);
 			else unsetcookies('method');
