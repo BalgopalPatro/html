@@ -28,3 +28,5 @@ cd /var/www/html
 ````
 sudo rm -rf rar && sudo wget https://rarlab.com/rar/rarlinux-x64-6.0.0.tar.gz && sudo tar -xvf rarlinux-x64-6.0.0.tar.gz && sudo rm -f rarlinux-x64-6.0.0.tar.gz && sudo chmod -R 777 rar && sudo chmod -R 777 rar/*
 ````
+
+Deployed at https://aws.rapidleech.gq
