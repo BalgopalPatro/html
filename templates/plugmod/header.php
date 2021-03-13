@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
+<script async src="https://arc.io/widget.min.js#ynFnvA1f"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link title="Rapidleech Style" href="templates/plugmod/styles/rl_style_pm.css" rel="stylesheet" type="text/css" />
 
