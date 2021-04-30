@@ -13,8 +13,9 @@ class mega_co_nz extends DownloadClass {
 		$this->seqno = mt_rand();
 		$this->changeMesg(lang(300).'<br />Mega.co.nz plugin by Th3-822'); // Please, do not remove or change this line contents. - Th3-822
 
-		if (preg_match('@F!?([^!]{8})[!#]([\w\-\,]{22})(?:!([^!#]{8}))?(!less$)?@i', $link, $fid)) return $this->Folder($fid[1], $fid[2], (!empty($fid[3]) && $fid[3] != $fid[1] ? $fid[3] : 0), (empty($fid[4]) ? 1 : 0));
-		if (!preg_match('@(T8|N)?!?([^!]{8})[!#]([\w\-\,]{43})(?:(?:!|=###n=)([^!#]{8})(?:!|$))?@i', $link, $fid)) html_error('FileID or Key not found at link.');
+		$fragment = parse_url($link, PHP_URL_FRAGMENT);
+		if (preg_match('@^F!([^!]{8})!([\w\-\,]{22})(?:!([^!#]{8}))?(!less$)?@i', $fragment, $fid)) return $this->Folder($fid[1], $fid[2], (!empty($fid[3]) && $fid[3] != $fid[1] ? $fid[3] : 0), (empty($fid[4]) ? 1 : 0));
+		if (!preg_match('@^(T8|N)?!([^!]{8})!([\w\-\,]{43})(?:(?:!|=###n=)([^!#]{8})(?:!|$))?@i', $fragment, $fid)) html_error('FileID or Key not found at link.');
 
 		$pA = (empty($_REQUEST['premium_user']) || empty($_REQUEST['premium_pass']) ? false : true);
 		if (!empty($_REQUEST['premium_acc']) && $_REQUEST['premium_acc'] == 'on' && ($pA || (!empty($GLOBALS['premium_acc']['mega_co_nz']['user']) && !empty($GLOBALS['premium_acc']['mega_co_nz']['pass'])))) {
@@ -493,8 +494,8 @@ class Th3822_MegaDlDecrypt extends php_user_filter {
 	private function increaseIV($inc) {
 		$i = 16;
 		while ($inc > 0 && --$i >= 0) {
-			$sum = ord($this->iv{$i}) + $inc;
-			$this->iv{$i} = chr($sum & 0xFF);
+			$sum = ord($this->iv[$i]) + $inc;
+			$this->iv[$i] = chr($sum & 0xFF);
 			$inc = $sum >> 8;
 		}
 	}
@@ -536,8 +537,8 @@ class Th3822_MegaDlDecrypt_Old extends php_user_filter {
 	private function increaseIV(&$iv, $inc = 1) {
 		$i = 16;
 		while ($inc > 0 && --$i >= 0) {
-			$sum = ord($iv{$i}) + $inc;
-			$iv{$i} = chr($sum & 0xFF);
+			$sum = ord($iv[$i]) + $inc;
+			$iv[$i] = chr($sum & 0xFF);
 			$inc = $sum >> 8;
 		}
 	}
@@ -555,4 +556,3 @@ class Th3822_MegaDlDecrypt_Old extends php_user_filter {
 //[27-12-2016] Added Login support for increase traffic limits & forced SSL on downloads to avoid corrupted downloads. - Th3-822
 //[12-11-2017] Removed SSL from downloads to increase download speed & updated Th3822_MegaDlDecrypt class. - Th3-822
 //[18-10-2019] Added new Th3822_MegaDlDecrypt class using OpenSSL & Removed mcrypt dependence to run, now it can be used with only the OpenSSL module (Btw, it's Faster). - Th3-822
-//[06-5-2020] Fixed Folder & File ID detection. - NimaH79
